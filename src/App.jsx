@@ -7,7 +7,7 @@ function App() {
   return (
     <div
       style={{
-        display: "flex",
+        display: "block",
 
         width: "100vw",
         height: "100vh",
@@ -16,9 +16,9 @@ function App() {
         alignItems: "center",
       }}
     >
-      {/* <BoxAlign /> */}
-      {/* <SelectButtons /> */}
-      {/* <PlayGround /> */}
+      { <BoxAlign /> }
+      { <SelectButtons /> }
+      { <PlayGround /> }
     </div>
   );
 }

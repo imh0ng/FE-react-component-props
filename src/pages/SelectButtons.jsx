@@ -1,5 +1,25 @@
+import Button from "../components/Button/Button";
+import { useState } from 'react';
+
 const SelectButtons = () => {
-  return <div className="selectBtns"></div>;
+  const [activeButtonName, SetActiveButton] = useState("Default");
+
+  const handleButtonClick = (name) => {
+    SetActiveButton(name);
+  };
+  
+  return (
+    <div className="selectBtns">
+      {["Primary", "Secondary", "Default"].map((btnName) => (
+        <Button 
+          key={btnName}
+          btnName={btnName}
+          onClick={() => handleButtonClick(btnName)}
+          isOn={activeButtonName === btnName}
+        />
+      ))}
+    </div>
+  );
 };
 
 export default SelectButtons;

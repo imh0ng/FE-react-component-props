@@ -12,3 +12,7 @@
 .btn:hover {
   background-color: #1e40af;
 }
+
+.on {
+  background-color: #ffbdc9 !important;
+}
