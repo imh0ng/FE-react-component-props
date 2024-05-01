@@ -1,9 +1,14 @@
 import { forwardRef } from "react";
+import Label from "../Label/Label"
+import SupportingText from "../SupportingText/SupportingText";
+import "./Input.css"
 
-const Input = ({}, ref) => {
+const Input = ({ label, supportingText, isError, placeholder }, ref) => {
   return (
     <div>
-      <input ref={ref} className="input" />
+      <Label htmlFor={label}>{label}</Label>
+      <input ref={ref} className={isError ? 'input error' : 'input'} placeholder={placeholder} />
+      <SupportingText isError={isError}>{supportingText}</SupportingText>
     </div>
   );
 };
